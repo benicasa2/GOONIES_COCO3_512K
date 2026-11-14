@@ -1,0 +1,4 @@
+XRoar 1.12, CoCo 3 / 512 KiB. 456 input updates.
+Both actors reached the exit. Five lives and 1550 points.
+DAC SHA256 f2bd65dbde090bee0a9ce6a2138750d4127453faa9909736f1a881da1969da76
+SSC SHA256 d584df0fe123db90f549973094a05998ce018f082a8261c2ea38bc6cb4b38349

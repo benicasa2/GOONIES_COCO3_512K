@@ -1,0 +1,13 @@
+Title source: user-supplied Apple II title PNG, 560x384, with Datasoft copyright.
+The converted 280x192 image is centered in a 320x192 frame.
+LWASM: rebuilt both Disk BASIC images and both standalone binaries.
+XRoar 1.12: both released disks started the theme sequencer while displaying the title.
+Instrumented XRoar DAC run verified a checksum on all four decoded title banks.
+No input, Space press, hold and release produced the first game frame and restored the gameplay palette.
+The SSC test covers sequencing. Physical cartridge sound remains unverified.
+
+DAC
+2d65| 8e2d83      LDX   #$2d83              cc=90 a=00 b=be dp=00 x=2d83 y=ffc0 u=b226 s=1eef
+
+SSC
+2dbf| 8e2ddd      LDX   #$2ddd              cc=90 a=00 b=8c dp=00 x=2ddd y=ffc0 u=b226 s=1eef

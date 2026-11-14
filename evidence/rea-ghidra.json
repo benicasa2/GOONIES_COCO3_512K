@@ -1,0 +1,131 @@
+[
+  {
+    "evidence_id": "ev_31fae1362a31ffe5d04ef1f86595be4e27a5414ec787c363d99cdb21e7c13851",
+    "target": "apple-rle.bin",
+    "sha256": "709653aefc6c455e1da29fb88f18605a8fae4b0f427a8636d4e706793582d901",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "language": "6502:LE:16:default",
+    "entry": "0x1bac",
+    "body": [
+      {
+        "start": "0x1bac",
+        "end": "0x1c01"
+      }
+    ],
+    "limitations": [
+      "Unresolved computed or indirect flows without target addresses are not represented as reference edges.",
+      "Thunk and external classifications are Ghidra FunctionManager observations; they do not resolve targetless calls.",
+      "Pseudocode and assembly are Ghidra-specific representations, not original source or Hopper-equivalent text.",
+      "Synthetic Ghidra entry-point references without actionable memory sources are omitted."
+    ],
+    "assembly": [
+      "0x1bac: LDX #0x20",
+      "0x1bae: STX 0x0018",
+      "0x1bb0: LDY #0x0",
+      "0x1bb2: STY 0x0017",
+      "0x1bb4: TYA",
+      "0x1bb5: STA (0x17),Y",
+      "0x1bb7: INY",
+      "0x1bb8: BNE 0x1bb5",
+      "0x1bba: INC 0x0018",
+      "0x1bbc: DEX",
+      "0x1bbd: BNE 0x1bb5",
+      "0x1bbf: LDA #0x0",
+      "0x1bc1: STA 0x00aa",
+      "0x1bc3: STA 0x00a9",
+      "0x1bc5: LDA #0x63",
+      "0x1bc7: STA 0x00ab",
+      "0x1bc9: LDA #0x4c",
+      "0x1bcb: STA 0x00ac",
+      "0x1bcd: LDY #0x0",
+      "0x1bcf: LDA (0xab),Y",
+      "0x1bd1: BEQ 0x1c01",
+      "0x1bd3: TAX",
+      "0x1bd4: INC 0x00ab",
+      "0x1bd6: BNE 0x1bda",
+      "0x1bd8: INC 0x00ac",
+      "0x1bda: LDA (0xab),Y",
+      "0x1bdc: STA 0x00ad",
+      "0x1bde: JSR 0x1c02",
+      "0x1be1: LDY #0x0",
+      "0x1be3: LDA 0x00ad",
+      "0x1be5: STA (0x17),Y",
+      "0x1be7: INC 0x00a9",
+      "0x1be9: LDA 0x00a9",
+      "0x1beb: CMP #0xc0",
+      "0x1bed: BNE 0x1bf5",
+      "0x1bef: INC 0x00aa",
+      "0x1bf1: LDA #0x0",
+      "0x1bf3: STA 0x00a9",
+      "0x1bf5: DEX",
+      "0x1bf6: BNE 0x1bde",
+      "0x1bf8: INC 0x00ab",
+      "0x1bfa: BNE 0x1bfe",
+      "0x1bfc: INC 0x00ac",
+      "0x1bfe: JMP 0x1bcd",
+      "0x1c01: RTS"
+    ],
+    "callees": [
+      "0x1c02"
+    ]
+  },
+  {
+    "evidence_id": "ev_95e3b258beb7f1e501a03b9014dfde56ef26e6db4847e8ea4cd736c0c063e19c",
+    "target": "c64-game-code.bin",
+    "sha256": "634387a2a8754e72dcbcfc7d899fa90aec7ffb9c0a23c9775864266ba94785f2",
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "language": "6510:LE:16:default",
+    "entry": "0x2000",
+    "body": [
+      {
+        "start": "0x2000",
+        "end": "0x2167"
+      }
+    ],
+    "limitations": [
+      "Unresolved computed or indirect flows without target addresses are not represented as reference edges.",
+      "Thunk and external classifications are Ghidra FunctionManager observations; they do not resolve targetless calls.",
+      "Pseudocode and assembly are Ghidra-specific representations, not original source or Hopper-equivalent text.",
+      "Synthetic Ghidra entry-point references without actionable memory sources are omitted.",
+      "Ghidra Listing reports a terminal call at 0x2165 to 0x2880 FUN_2880 (external=false, thunk=false, hasNoReturn=false); fallthrough is excluded by Ghidra's flow model. The reason for the terminal flow is not established by this observation."
+    ],
+    "assembly": [
+      "0x2000: LDA 0xd012",
+      "0x2003: STA 0x21b4",
+      "0x2006: LDA #0x0",
+      "0x2008: STA 0xd011",
+      "0x200b: TAX",
+      "0x200c: TAY",
+      "0x200d: JSR 0x1000",
+      "0x2010: LDA #0x80",
+      "0x2012: STA 0x0291",
+      "0x2015: LDA #0xc1",
+      "0x2017: STA 0x0318",
+      "0x201a: JSR 0xe544",
+      "0x201d: LDX #0x27",
+      "0x201f: LDA #0x0",
+      "0x2021: STA 0xd968,X",
+      "0x2024: STA 0xd9b8,X",
+      "0x2027: STA 0xda08,X",
+      "0x202a: LDA #0xf"
+    ],
+    "callees": [
+      "0x21b5",
+      "0x228a",
+      "0x2311",
+      "0x2354",
+      "0x2396",
+      "0x23ee",
+      "0x243d",
+      "0x2880"
+    ]
+  }
+]

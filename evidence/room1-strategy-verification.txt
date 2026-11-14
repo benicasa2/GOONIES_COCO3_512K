@@ -1,0 +1,12 @@
+The Apple II puzzle was traced to $61B6 (chair), $62A7/$6321/$635C (printing and distraction),
+$63EE/$6259 (cooler and fireplace) and $6468 (both players at the exit).
+XRoar 1.12: both audio variants tested with the same injected control sequence.
+The test skips the title, starts the room at normal spawn coordinates and injects input only.
+No actors were repositioned and the room inspection key was not used.
+The first room bank changes from $10 to $1A (next overlay in the original order).
+
+DAC
+237b| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd
+
+SSC
+237b| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd

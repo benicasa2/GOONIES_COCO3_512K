@@ -1,0 +1,25 @@
+Reference: the user-supplied 560x384 Apple II gameplay capture.
+191 detailed local HGR signal patterns, plus shorter-window and legacy fallbacks.
+The mean absolute RGB channel error on the reference background region is 34.89 before and 9.83 after.
+This is a comparison with the calibration capture and includes a few moving objects.
+The initial Goonie and Fratelli poses use 11 visible palette indices each.
+XRoar checked a complete 16x22 color-keyed sprite over a nonblack buffer, byte for byte.
+XRoar verified both room 1 transitions, room 2 launcher, room 3 crushers, and the ending return.
+
+color-blit-test
+2121| 20fe        BRA   $2121               cc=04 a=ab b=00 dp=00 x=4dca y=ffc0 u=21d5 s=1eff
+
+color-route-DAC
+2381| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd
+
+color-route-SSC
+2381| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd
+
+color-launcher
+213f| 20fe        BRA   $213f               cc=04 a=86 b=06 dp=00 x=0086 y=6f79 u=00f6 s=1eff
+
+color-room3
+210e| 20fe        BRA   $210e               cc=04 a=08 b=04 dp=00 x=2b8b y=2e1f u=6363 s=1eff
+
+color-ending-test
+237f| 97ac        STA   <$ac                cc=00 a=10 b=00 dp=00 x=4ff1 y=6000 u=6934 s=1efb

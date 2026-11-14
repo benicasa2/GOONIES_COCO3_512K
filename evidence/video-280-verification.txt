@@ -1,0 +1,24 @@
+LWASM, DAC and SSC disk and standalone builds.
+Decoded all 16 room payloads from the two Disk BASIC images.
+All 192 rows of each room match 10 blank bytes + 140 original-width bytes + 10 blank bytes.
+Each disk payload includes the expected five-bank room layout and collision data.
+
+XRoar 1.12, CoCo 3, 512 KiB
+
+DAC, first framebuffer flip
+2106| fdff9d      STD   $ff9d               cc=10 a=30 b=00 dp=00 x=4519 y=26b5 u=27d0 s=1ef1
+
+SSC, first framebuffer flip
+2106| fdff9d      STD   $ff9d               cc=90 a=30 b=00 dp=00 x=4519 y=26b5 u=27d0 s=1ef1
+
+Sprite crossing, instrumented at x=36 y=51
+26f1| b7ffa2      STA   $ffa2               cc=00 a=0d b=02 dp=00 x=4000 y=26b6 u=26f7 s=1ef8
+
+Overlay 1 to 3, instrumented
+22a6| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=607f s=1efd
+
+Overlay 5 to 6, instrumented
+22a6| 97ac        STA   <$ac                cc=00 a=29 b=19 dp=00 x=0088 y=00bc u=6098 s=1efd
+
+Overlay 6 to 7, instrumented
+22a6| 97ac        STA   <$ac                cc=00 a=2e b=1e dp=00 x=0088 y=29c6 u=60c0 s=1efd

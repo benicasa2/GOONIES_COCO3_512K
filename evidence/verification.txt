@@ -1,0 +1,60 @@
+Apple II original decoder, Py65
+Room 1: 7680 HGR bytes match (186539 6502 instructions)
+Room 2: 7680 HGR bytes match (183346 6502 instructions)
+Room 3: 7680 HGR bytes match (188949 6502 instructions)
+Room 4: 7680 HGR bytes match (190677 6502 instructions)
+Room 5: 7680 HGR bytes match (178283 6502 instructions)
+Room 6: 7680 HGR bytes match (175156 6502 instructions)
+Room 7: 7680 HGR bytes match (177468 6502 instructions)
+Room 8: 7680 HGR bytes match (178591 6502 instructions)
+
+XRoar 1.12 / v3-DAC
+[cart:rom] Cartridge ROM (1 x 8K)
+	Slot   0: CRC32 0x0b9c5415 FILE disk11.rom
+	Slot   0: Disk Extended Colour BASIC 1.1 (Tandy)
+[vdisk/jvc] C:\Users\Anderson\Documents\Codex\2026-11-08\prompt-de-arquitetura-e-c-digo\work\v3-build\GOON-DAC.DSK: reading: 35C 1H 18S (256-byte)
+2559| 0dae        TST   <$ae                cc=04 a=0d b=01 dp=00 x=0086 y=2657 u=607f s=1efd
+255b| 2709        BEQ   $2566               cc=04 a=0d b=01 dp=00 x=0086 y=2657 u=607f s=1efd
+2566| 8e008c      LDX   #$008c              cc=00 a=0d b=01 dp=00 x=008c y=2657 u=607f s=1efd
+2569| 9683        LDA   <$83                cc=00 a=08 b=01 dp=00 x=008c y=2657 u=607f s=1efd
+256b| 8108        CMPA  #$08                cc=04 a=08 b=01 dp=00 x=008c y=2657 u=607f s=1efd
+256d| 2702        BEQ   $2571               cc=04 a=08 b=01 dp=00 x=008c y=2657 u=607f s=1efd
+2571| 9f98        STX   <$98                cc=00 a=08 b=01 dp=00 x=008c y=2657 u=607f s=1efd
+2573| ec84        LDD   ,X                  cc=00 a=00 b=67 dp=00 x=008c y=2657 u=607f s=1efd
+
+XRoar 1.12 / v3-SSC
+[cart:rom] Cartridge ROM (1 x 8K)
+	Slot   0: CRC32 0x0b9c5415 FILE disk11.rom
+	Slot   0: Disk Extended Colour BASIC 1.1 (Tandy)
+[vdisk/jvc] C:\Users\Anderson\Documents\Codex\2026-11-08\prompt-de-arquitetura-e-c-digo\work\v3-build\GOON-SSC.DSK: reading: 35C 1H 18S (256-byte)
+2100| 48          LSLA                      cc=90 a=16 b=08 dp=00 x=50e7 y=2657 u=2763 s=1ef1
+2101| 48          LSLA                      cc=90 a=2c b=08 dp=00 x=50e7 y=2657 u=2763 s=1ef1
+2102| 5f          CLRB                      cc=94 a=2c b=00 dp=00 x=50e7 y=2657 u=2763 s=1ef1
+2103| fdff9d      STD   $ff9d               cc=90 a=2c b=00 dp=00 x=50e7 y=2657 u=2763 s=1ef1
+2106| 39          RTS                       cc=90 a=2c b=00 dp=00 x=50e7 y=2657 u=2763 s=1ef3
+20fa| 0f84        CLR   <$84                cc=94 a=2c b=00 dp=00 x=50e7 y=2657 u=2763 s=1ef3
+20fc| bd27c5      JSR   $27c5               cc=94 a=2c b=00 dp=00 x=50e7 y=2657 u=2763 s=1ef1
+27c5| dca5        LDD   <$a5                cc=90 a=28 b=09 dp=00 x=50e7 y=2657 u=2763 s=1ef1
+
+XRoar 1.12 / v3-route
+229e| 97ac        STA   <$ac                cc=00 a=18 b=01 dp=00 x=0088 y=265c u=607f s=1efd
+22a0| bd2248      JSR   $2248               cc=00 a=18 b=01 dp=00 x=0088 y=265c u=607f s=1efb
+2248| bd2240      JSR   $2240               cc=00 a=18 b=01 dp=00 x=0088 y=265c u=607f s=1ef9
+2240| 96ac        LDA   <$ac                cc=00 a=18 b=01 dp=00 x=0088 y=265c u=607f s=1ef9
+2242| 8b03        ADDA  #$03                cc=00 a=1b b=01 dp=00 x=0088 y=265c u=607f s=1ef9
+2244| b7ffa3      STA   $ffa3               cc=00 a=1b b=01 dp=00 x=0088 y=265c u=607f s=1ef9
+2247| 39          RTS                       cc=00 a=1b b=01 dp=00 x=0088 y=265c u=607f s=1efb
+224b| fc6000      LDD   $6000               cc=00 a=06 b=33 dp=00 x=0088 y=265c u=607f s=1efb
+224e| dd86        STD   <$86                cc=00 a=06 b=33 dp=00 x=0088 y=265c u=607f s=1efb
+2250| fc6002      LDD   $6002               cc=00 a=1c b=33 dp=00 x=0088 y=265c u=607f s=1efb
+2253| dd88        STD   <$88                cc=00 a=1c b=33 dp=00 x=0088 y=265c u=607f s=1efb
+2255| fc6004      LDD   $6004               cc=04 a=00 b=00 dp=00 x=0088 y=265c u=607f s=1efb
+Scene 1: 49152 occupancy bits preserved
+Scene 2: 49152 occupancy bits preserved
+Scene 3: 49152 occupancy bits preserved
+Scene 4: 49152 occupancy bits preserved
+Scene 5: 49152 occupancy bits preserved
+Scene 6: 49152 occupancy bits preserved
+Scene 7: 49152 occupancy bits preserved
+Scene 8: 49152 occupancy bits preserved
+16 distinct GIME RGB codes, contrast: 3.54554008502417

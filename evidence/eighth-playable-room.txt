@@ -1,0 +1,49 @@
+Room 8, 2026-11-13. XRoar 1.12, CoCo 3 NTSC 512 KiB.
+438 control updates; five lives, no death, 1000 points, Fratelli removed.
+160-update differential mechanism trace and 128 native gate combinations passed.
+
+eighth-test-pass
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+1b65| 20fe        BRA   $1b65               cc=04 a=a0 b=00 dp=00 x=040a y=ffc0 u=6640 s=1eff
+1b65| 20fe        BRA   $1b65               cc=04 a=a0 b=00 dp=00 x=040a y=ffc0 u=6640 s=1eff
+
+eighth-win
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+25c8| 0cba        INC   <$ba                cc=00 a=08 b=00 dp=00 x=1861 y=00bc u=1867 s=1efd
+25ca| 0fac        CLR   <$ac                cc=04 a=08 b=00 dp=00 x=1861 y=00bc u=1867 s=1efd
+
+eighth-SSC-win
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+25c8| 0cba        INC   <$ba                cc=00 a=08 b=00 dp=00 x=1861 y=00bc u=1867 s=1efd
+25ca| 0fac        CLR   <$ac                cc=04 a=08 b=00 dp=00 x=1861 y=00bc u=1867 s=1efd
+
+eighth-ending
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+2886| 8610        LDA   #$10                cc=00 a=10 b=00 dp=00 x=4ff1 y=6000 u=6934 s=1efd
+2888| bd231c      JSR   $231c               cc=00 a=10 b=00 dp=00 x=4ff1 y=6000 u=6934 s=1efb
+
+eighth-SSC-ending
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+2886| 8610        LDA   #$10                cc=80 a=10 b=00 dp=00 x=4ff1 y=6000 u=6934 s=1efd
+2888| bd231c      JSR   $231c               cc=80 a=10 b=00 dp=00 x=4ff1 y=6000 u=6934 s=1efb
+
+eighth-regression6
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+231c| 97ac        STA   <$ac                cc=00 a=2e b=1e dp=00 x=0088 y=38b3 u=6007 s=1efd
+231e| bd22b2      JSR   $22b2               cc=00 a=2e b=1e dp=00 x=0088 y=38b3 u=6007 s=1efb
+
+GOON-DAC.DSK SHA256 3d563d6f4247c8e4460d4c7c691899f46fc769cd6c9367ef096f0fbd6805deb1
+
+GOON-SSC.DSK SHA256 53ad91926d6bcd662cd57ff05c456c49fd914aaba201be4b62e32b86326a5a13
+
+Production title boot
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+20be| 9680        LDA   <$80                cc=84 a=00 b=be dp=00 x=0098 y=ffc0 u=7fff s=1eff
+20c0| 9181        CMPA  <$81                cc=84 a=00 b=be dp=00 x=0098 y=ffc0 u=7fff s=1eff

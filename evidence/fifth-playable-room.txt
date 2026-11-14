@@ -1,0 +1,16 @@
+Fifth playable room (Apple overlay 5). XRoar configured as CoCo 3 with 512 KiB.
+Both replays use the ordinary spawn and send only control masks. The players wait for the flying hazard and use the middle passages.
+The first change_room stores $29 (overlay 6) after both players reach the right-hand exit.
+fifth-room-input.txt: (number of gameplay updates, control mask), hex, terminated by 00.
+Masks: 01 up, 02 down, 04 left, 08 right, 20 G, 40 jump.
+DAC: 230d| 97ac        STA   <$ac                cc=00 a=29 b=19 dp=00 x=1861 y=00bc u=1867 s=1efd
+SSC: 230d| 97ac        STA   <$ac                cc=00 a=29 b=19 dp=00 x=1861 y=00bc u=1867 s=1efd
+Decoded records matched 5397 Apple II frame states across four flying paths and the three egg timer phases.
+The isolated XRoar test checked spawn on update 128, a shadow framebuffer byte, an egg reaching the lift sensor, the 50-point award and the 8-pixel lift rise.
+The same test verified that the upper-right control disables the right trap and that both trap tips can kill.
+21a6| 20fe        BRA   $21a6               cc=04 a=88 b=01 dp=00 x=1c35 y=0002 u=1c2d s=1eff
+Fourth room regression: 230a| 97ac        STA   <$ac                cc=00 a=24 b=14 dp=00 x=1861 y=00bc u=1867 s=1efd
+Updated egg movement: 947 native states with neutral, right and left input. All six directed passage displacements occur in the graph.
+Current isolated XRoar checks: pushed eggs through three passages on different floors, checked the hidden frames, hatched from the changed position, and raised the platform for 50 points.
+1bf7| 20fe        BRA   $1bf7               cc=04 a=29 b=68 dp=00 x=1280 y=1c6f u=00f6 s=1eff
+Current fourth room regression: 230d| 97ac        STA   <$ac                cc=00 a=24 b=14 dp=00 x=1861 y=00bc u=1867 s=1efd

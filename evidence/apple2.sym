@@ -1,0 +1,56 @@
+; Apple II (Club X / First Class). Labels assigned during analysis.
+; Boot and second-stage loader
+apple_boot                  equ $0801
+boot_rotate                 equ $0814
+stage_disk_read             equ $0486
+stage_start                 equ $05EF
+stage_load_overlay          equ $0625
+stage_disk_sector_map       equ $027E
+; Game overlay index 9
+apple_game_entry            equ $0800
+actor_update_dispatch       equ $0905
+actor_find_free_slot        equ $0951
+actor_type                  equ $001D
+actor_vx                    equ $0028
+actor_vy                    equ $0033
+actor_x                     equ $003E
+actor_y                     equ $0049
+actor_frame                 equ $0054
+actor_anim_select           equ $0A62
+actor_aabb                  equ $0AF6
+terrain_scan                equ $0B36
+terrain_aabb_loop           equ $0BBF
+gravity_plus_one_cap_four   equ $0D2A
+frame_width_table           equ $0E1C
+frame_height_table          equ $0E58
+terrain_select              equ $0F2E
+terrain_row_count           equ $0F9C
+terrain_type_pointers       equ $0FA6
+terrain_left_pointers       equ $0FBA
+terrain_top_pointers        equ $0FCE
+terrain_right_pointers      equ $0FE2
+terrain_bottom_pointers     equ $0FF6
+scene_rle_hgr               equ $1BAC
+scene_hgr_address           equ $1C02
+; Room overlays 0 through 7, mutually exclusive address range
+scene_rle_data              equ $4C63
+; Per-room transition writes, valid only with their room overlay loaded.
+exit_overlay1             equ $6491
+exit_overlay2             equ $628B
+exit_overlay3             equ $6414
+exit_overlay4             equ $60F7
+exit_overlay5             equ $6083
+exit_overlay6             equ $6104
+exit_overlay7             equ $622A
+exit_overlay8             equ $60B1
+cooler_jump_check         equ $63EE
+fire_collision_switch     equ $6290
+
+; Room 5/6 overlays use the same addresses for distinct routines.
+room5_passage_logic       equ $617A
+room5_passage_table       equ $658F
+room6_passage_logic       equ $62B8
+room6_passage_table       equ $635D
+room6_plate_logic         equ $610B
+room6_platform_apply      equ $636B
+room6_platform_layouts    equ $63DE

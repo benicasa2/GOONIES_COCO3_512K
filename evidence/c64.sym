@@ -1,0 +1,15 @@
+; C64 RAM after unpacker, exact dump SHA-256 in assets.json.
+basic_sys_packer          equ $080B
+packer_exit_game_entry    equ $2000
+entry_raster_observation  equ $21B4
+music_credit_region       equ $B552
+; SID init/update candidates require the runtime bank/overlay context.
+; VIC sprite disable: STA $D015 at $5240, with immediate LDA #0.
+vic_sprite_disable       equ $5240
+; Runtime addresses after the gameplay overlay is loaded.
+c64_actor_draw            equ $0C8A
+c64_bitmap_blit           equ $6D4E
+c64_capture_point         equ $09A1
+c64_iec_hook              equ $4550
+c64_vic_bitmap            equ $4000
+c64_vic_attributes        equ $6000

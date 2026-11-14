@@ -1,0 +1,18 @@
+Original overlay 1 $62A7/$6321/$635C compared with the 6809 cash update in XRoar.
+180 updates, 14 checkpoints: eight slot heights, cursor, mechanism height, visible and low note counts.
+Printer contact ends after frame 100. Three $8C collection limits were injected on both platforms.
+A separate XRoar test checks return toward home without visible notes, the diversion when a note
+enters the visible band, and the collection pose/limit at the original collection X threshold.
+Room traversal: both audio variants, normal initial actor positions and injected gameplay input.
+
+cash-test
+2147| 20fe        BRA   $2147               cc=24 a=b4 b=67 dp=00 x=2204 y=3673 u=3628 s=1eff
+
+cash-ai-test
+210f| 20fe        BRA   $210f               cc=20 a=8c b=8c dp=00 x=0088 y=ffc0 u=00f6 s=1eff
+
+cash-route-DAC
+237e| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd
+
+cash-route-SSC
+237e| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd

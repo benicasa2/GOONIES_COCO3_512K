@@ -1,0 +1,23 @@
+Third playable room (Apple overlay 2). XRoar configured as CoCo 3 with 512 KiB.
+Replay starts directly in the room with its ordinary spawn/reset and sends only control masks.
+The ceiling mechanism and both falling traps are active during the replay.
+The replay takes the upper-right and central switches and moves both players to the exit.
+Success: the first change_room stores $1F (overlay 4) and executes reset_room.
+third-room-input.txt: (number of gameplay updates, control mask), hex, terminated by 00.
+Masks: 01 up, 02 down, 04 left, 08 right, 20 G, 40 jump.
+DAC: 22fe| 97ac        STA   <$ac                cc=00 a=1f b=0f dp=00 x=0088 y=31bf u=6007 s=1efd
+SSC: 22fe| 97ac        STA   <$ac                cc=00 a=1f b=0f dp=00 x=0088 y=31bf u=6007 s=1efd
+Earlier door test: framebuffer checks passed for all four opening frames.
+Native $6292 timeline: 789 updates, 170 distinct records.
+Frame 1: checked opaque framebuffer bytes for the carrier and both traps, restored the background, and verified that the last record loops to the first.
+2174| 20fe        BRA   $2174               cc=04 a=19 b=15 dp=00 x=6000 y=633d u=6325 s=1eff
+Collision assertions tested each drop separately, including a hit on either player.
+2105| 20fe        BRA   $2105               cc=04 a=86 b=86 dp=00 x=0086 y=ffc0 u=633d s=1eff
+2105| 20fe        BRA   $2105               cc=04 a=88 b=88 dp=00 x=0088 y=ffc0 u=6341 s=1eff
+Launcher assertions tested the original countdown seed, an inactive launcher with the gate closed before expiry, activation after expiry and activation by the gate.
+2115| 20fe        BRA   $2115               cc=00 a=00 b=00 dp=00 x=7900 y=ffc0 u=b226 s=1eff
+Second room regression: 22fe| 97ac        STA   <$ac                cc=00 a=15 b=05 dp=00 x=0088 y=31ad u=6007 s=1efd
+Stock DAC disk reaches title_wait: 20b8| 9680        LDA   <$80                cc=84 a=00 b=be dp=00 x=0098 y=ffc0 u=b226 s=1eff
+Launcher vertical trace: 48 paths from Apple II $60AB (16 initial, 16 first lane changes, 16 repeating).
+XRoar matched the Apple II rolling checksum $8F77 for 2200 launcher updates, starting at lane 2 and hashing Y, lane and hold.
+210f| 20fe        BRA   $210f               cc=04 a=8f b=77 dp=00 x=78fc y=0000 u=00f6 s=1eff

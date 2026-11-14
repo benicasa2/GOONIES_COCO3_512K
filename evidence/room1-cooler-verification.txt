@@ -1,0 +1,13 @@
+Apple II $63D0: cooler fall-state and fire-out flags compared for 14 updates.
+XRoar instrumented test rejects a leftward jump and a rightward fall.
+A rightward jump starts the fall. The descent stays blocked until the fireplace is out.
+Fall and flame graphics were produced by the original $642D and $6259 routines.
+
+cooler-test
+2147| 20fe        BRA   $2147               cc=04 a=9e b=00 dp=00 x=0086 y=2167 u=7335 s=1eff
+
+cooler-route-DAC
+2381| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd
+
+cooler-route-SSC
+2381| 97ac        STA   <$ac                cc=00 a=1a b=0a dp=00 x=0088 y=00bc u=6007 s=1efd

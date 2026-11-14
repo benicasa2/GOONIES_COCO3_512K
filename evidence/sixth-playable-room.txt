@@ -1,0 +1,44 @@
+Room 6 correction, 2026-11-12. XRoar 1.12, CoCo 3 NTSC, 512 KiB.
+349 control updates; DAC/SSC finish with 5 lives, death=0, next bank $2E.
+160 updates x 9 actors match original 6502 state evolution (8000 bytes).
+Isolated test passes all nine falling contacts and lower-pit checks.
+
+sixth-exit
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+2316| 97ac        STA   <$ac                cc=00 a=2e b=1e dp=00 x=0088 y=38d1 u=6007 s=1efd
+2318| bd22af      JSR   $22af               cc=00 a=2e b=1e dp=00 x=0088 y=38d1 u=6007 s=1efb
+
+sixth-SSC-exit
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+2316| 97ac        STA   <$ac                cc=00 a=2e b=1e dp=00 x=0088 y=38d1 u=6007 s=1efd
+2318| bd22af      JSR   $22af               cc=00 a=2e b=1e dp=00 x=0088 y=38d1 u=6007 s=1efb
+
+sixth-test-pass
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+1be0| 20fe        BRA   $1be0               cc=04 a=88 b=88 dp=00 x=0088 y=00c1 u=6480 s=1eff
+1be0| 20fe        BRA   $1be0               cc=04 a=88 b=88 dp=00 x=0088 y=00c1 u=6480 s=1eff
+
+sixth-regression4
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+2316| 97ac        STA   <$ac                cc=00 a=24 b=14 dp=00 x=1861 y=00bc u=1867 s=1efd
+2318| bd22af      JSR   $22af               cc=00 a=24 b=14 dp=00 x=1861 y=00bc u=1867 s=1efb
+
+sixth-regression5
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+2316| 97ac        STA   <$ac                cc=00 a=29 b=19 dp=00 x=1861 y=00bc u=1867 s=1efd
+2318| bd22af      JSR   $22af               cc=00 a=29 b=19 dp=00 x=1861 y=00bc u=1867 s=1efb
+
+sixth-production-title
+[part:coco3] Tandy | Colour Computer 3
+[part:rsdos] Tandy | RS-DOS
+20be| 9680        LDA   <$80                cc=84 a=00 b=be dp=00 x=0098 y=ffc0 u=6d3a s=1eff
+20c0| 9181        CMPA  <$81                cc=84 a=00 b=be dp=00 x=0098 y=ffc0 u=6d3a s=1eff
+
+GOON-DAC.DSK SHA256 404a763baebf4bcc718ff6b2a21cbb801e2e2693479c5ea0a7a59885418a4084
+
+GOON-SSC.DSK SHA256 94d69cd260069c15555514b8d99d61915f485465f89577ae9381821644e300e8

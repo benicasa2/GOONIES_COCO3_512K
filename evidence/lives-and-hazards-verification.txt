@@ -1,0 +1,27 @@
+Original Apple II death handler: poses $1C/$1D, life decrement, playable zero and terminal branch verified.
+Original room 3 crusher routine: all three timed paths match the model for 120 frames.
+Both LWASM disk variants reached the theme sequencer during the title in XRoar.
+XRoar instrumented input/state tests:
+
+Room 2: cooperative gate and lethal contact
+210c| 20fe        BRA   $210c               cc=01 a=00 b=86 dp=00 x=0086 y=2bf4 u=2be8 s=1eff
+
+Room 3: crusher wall, gate switch and lethal contact
+210e| 20fe        BRA   $210e               cc=04 a=08 b=04 dp=00 x=2b06 y=2c26 u=2cd6 s=1eff
+
+Life 1 -> 0, reload with persistent switch, then game over and restored title
+2902| 0d84        TST   <$84                cc=00 a=02 b=00 dp=00 x=557d y=8000 u=7fff s=1eff
+
+Overlay 5 -> 6
+2375| 97ac        STA   <$ac                cc=00 a=29 b=19 dp=00 x=0088 y=00bc u=6007 s=1efd
+
+Overlay 6 -> 7
+2375| 97ac        STA   <$ac                cc=00 a=2e b=1e dp=00 x=0088 y=3405 u=6007 s=1efd
+
+Prior overlay 1 -> 3 input sequence was intercepted by the new enemy
+2879| 0cc5        INC   <$c5                cc=01 a=00 b=86 dp=00 x=0086 y=00bc u=00f6 s=1efb
+
+No complete eight-room run is claimed. Physical SSC audio is unverified.
+
+Room 2 launcher, instrumented XRoar: inactive with gate closed, reaches first lane, does not fire into an empty lane, fires at an occupied lane, renders and restores the stamp, then marks player 1 for death on collision.
+213f| 20fe        BRA   $213f               cc=04 a=86 b=06 dp=00 x=0086 y=6f79 u=00f6 s=1eff

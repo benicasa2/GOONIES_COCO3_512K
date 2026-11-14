@@ -1,0 +1,21 @@
+Fourth playable room (Apple overlay 4). XRoar configured as CoCo 3 with 512 KiB.
+Both replays use the ordinary spawn and send only control masks. The upper switch is hit by jumping.
+The first change_room stores $24 (overlay 5) after both players enter the original lower-left exit.
+fourth-room-input.txt: (number of gameplay updates, control mask), hex, terminated by 00.
+Masks: 01 up, 02 down, 04 left, 08 right, 20 G, 40 jump.
+DAC: 2304| 97ac        STA   <$ac                cc=00 a=24 b=14 dp=00 x=1861 y=00bc u=1867 s=1efd
+SSC: 2304| 97ac        STA   <$ac                cc=00 a=24 b=14 dp=00 x=1861 y=00bc u=1867 s=1efd
+Upper switch changes the edge at frame 48: 1a3d| ecc4        LDD   ,U                  cc=20 a=01 b=f5 dp=00 x=61eb y=00bc u=6f11 s=1efd
+The exit awards 3 lives (5 to 8): 2590| 97c4        STA   <$c4                cc=01 a=08 b=cb dp=00 x=0088 y=00bc u=6007 s=1efd
+6502 check: 3000 consecutive updates with changing contacts matched the extracted movement graph.
+Isolated XRoar test checked right-side counter rollover, then used all three switch contacts and the bumper to remove one step.
+215c| 20fe        BRA   $215c               cc=05 a=08 b=00 dp=00 x=4ef9 y=f812 u=6f3e s=1eff
+Third room regression: 2304| 97ac        STA   <$ac                cc=00 a=1f b=0f dp=00 x=0088 y=31d5 u=6007 s=1efd
+Rewards regression: automatic particle spawn six updates after rollover and 35 points on removal of a step.
+217d| 20fe        BRA   $217d               cc=04 a=0c b=00 dp=00 x=195e y=1972 u=6f3e s=1eff
+Apple II $14BC trajectory checksum $1779 matched across 270 updates of the five-particle burst in XRoar.
+214b| 20fe        BRA   $214b               cc=04 a=03 b=05 dp=00 x=1861 y=0000 u=1867 s=1eff
+XRoar checked score and high-score framebuffer bytes for 1035, a particle pixel, lethal contact with player 2, and score reset with the record preserved.
+217a| 20fe        BRA   $217a               cc=24 a=03 b=05 dp=00 x=1861 y=7868 u=780e s=1eff
+Current third room regression: 2304| 97ac        STA   <$ac                cc=00 a=1f b=0f dp=00 x=0088 y=31de u=6007 s=1efd
+Current stock disk title: 20b8| 9680        LDA   <$80                cc=84 a=00 b=be dp=00 x=0098 y=ffc0 u=b226 s=1eff

@@ -1,0 +1,10 @@
+Second playable room (Apple overlay 3). XRoar configured as CoCo 3 with 512 KiB.
+The replay selects the room at startup and supplies only gameplay control masks.
+The normal room reset, spawns, hazards, key gate and exit are used.
+Input file format: (number of gameplay updates, control mask), hex, terminated by 00.
+Masks: 01 up, 02 down, 04 left, 08 right, 20 G, 40 jump.
+Success: the first change_room stores $15 (overlay 2) and executes reset_room.
+DAC: 22fb| 97ac        STA   <$ac                cc=00 a=15 b=05 dp=00 x=0088 y=308d u=6007 s=1efd
+SSC: 22fb| 97ac        STA   <$ac                cc=00 a=15 b=05 dp=00 x=0088 y=308d u=6007 s=1efd
+Rod endpoint 0: 21 framebuffer byte comparisons passed in XRoar.
+Rod endpoint 1: 21 framebuffer byte comparisons passed in XRoar.

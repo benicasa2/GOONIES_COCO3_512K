@@ -1,0 +1,6 @@
+XRoar 1.12 / CoCo 3 NTSC / 512 KiB
+1213 player-input updates
+DAC: ending_finished, 5 lives, 1000 points, enemy removed. SHA256 09cccfb8b760bf04b9e971efe25078651affd8bd67355b1a63a3cc2c61c46f7f
+SSC: ending_finished, 5 lives, 1000 points, enemy removed. SHA256 92617b548c266f4efbd3fc443df0369c6f1b6133e1091feecfb2485aa32b3566
+2000 physics and pose updates matched 6502. 128 gate and 160 mechanism cases passed.
+Room 6 replay reached room 7. Title framebuffer matched extracted asset.

@@ -1,0 +1,6 @@
+Transcription of user-supplied mono GOONIES-3VOZES.mp3
+1743 events, 12021 nominal 60 Hz ticks (200.35 s), 4436 bytes
+XRoar: disk boot, music end-to-start loop, and room 7 replay through room 8 with five lives.
+Ready-state test fixture: constructed AF packet checked against all three AY periods and amplitudes.
+Audible cartridge output was not tested. The preview is a software rendering.
+SSC disk SHA256 8717f8cd771973861e7cc78b24b98f9fa18d8ec1cc249b70c796f90fc657de67
